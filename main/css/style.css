@@ -1,0 +1,116 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+
+	display: block;
+	background-color: #B2BEC3;
+
+}
+h1,h3{
+	font-family: Arial;
+}
+p{
+	font-family: Helvetica;
+}
+header{
+	width: 100%;
+}
+.section-style{
+	background-color: #dfe6e9;
+	padding: 10px;
+  	border: 1px solid black;
+	overflow:all;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.s-header{ 
+	padding: 1%;
+	margin-bottom: 2%;
+	font-weight: bold;
+}
+.s-title{
+
+}
+.s-body{
+	position: relative;
+}
+.s-content{
+	clear: right;
+}
+#x-header{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.navbar-brand h1 {
+  color: #7CB4CC;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+a:link ,a:active ,a:hover ,a:visited, a:focus {
+  text-decoration: none;
+}
+
+#nav-list a {
+  color: #fff;
+}
+#nav-line {
+  border-top:1px solid white;
+}
+@media(min-width: 992px){
+
+.section-style{
+	width: 95%;
+
+}
+h1{
+	font-size: 3em;
+	font-weight: bold;
+	margin-top: 5%;
+}
+
+}
+@media (min-width:768px) and (max-width:991px) {
+
+h1{
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-top: 6%;
+}
+h3{
+	font-size: 17px;
+	font-weight: bold;
+}
+.section-style{
+	width: 85%;
+}
+
+}
+@media(max-width: 767px){
+
+h1{
+	margin-top: 5%;
+	font-size: 2em;
+	font-weight: bold;
+}
+.navbar-brand h1 {
+	font-size: 1.2em;
+}
+h3{
+	font-size: 22px;
+	font-weight: bold;
+}
+.section-style{
+	width: 80%;
+}
+
+}
