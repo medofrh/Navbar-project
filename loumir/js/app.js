@@ -1,17 +1,17 @@
 $(document).ready(()=>{
     $('.navbar').addClass('navbar-ready');
-
-    /*$(".navbar a").on('click', function(event) {
+    
+    $(".navbar a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
-            $('html, body').animate({
+            $('.container-sec').animate({
                 scrollTop: $(hash).offset().top
-            },500, function(){
+            },300, function(){
             window.location.hash = hash;
           });
         }
-    });*/
+    });
     //TODO: fix hash href onload and moveing to selected section
     //TODO: change navbar color when sliding
 });
@@ -42,3 +42,9 @@ $('#navbarNav ul li a').click(function(){
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
 });
+
+$('#btnMore').click(function(){
+    $('.container-sec').animate({
+        scrollTop: $("#service").offset().top
+    }, 300);
+})
