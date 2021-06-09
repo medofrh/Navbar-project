@@ -1,0 +1,184 @@
+/* 
+#ECF0F1
+#76b8e8
+#9CD4ED
+#3498db
+#4d4d4d
+#2c3e50
+#262626
+#ffc349
+#e74c3c
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html ::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #ECF0F1;
+  overflow: hidden;
+}
+
+body .navbar {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  background-color: #9CD4ED !important;
+  -webkit-transition: background-color 400ms linear;
+  transition: background-color 400ms linear;
+}
+
+body .navbar .navbar-brand {
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  color: #262626;
+}
+
+body .navbar .navbar-brand:hover {
+  color: #FFFFFF;
+  font-size: 140%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+body .navbar .active {
+  color: #FFFFFF !important;
+}
+
+body .navbar-ready {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+}
+
+@media screen and (min-width: 992px) {
+  body .navbar-ready li::before {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  body .navbar-ready li:hover::before {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  body .navbar-ready li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: #FFFFFF;
+    border-radius: 20px;
+    z-index: -1;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+  }
+  body .navbar-ready li > .nav-link:hover {
+    color: #4D4D4D !important;
+  }
+  body .navbar-ready li {
+    position: relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+
+body .navbar-ready .nav-link {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 990px) {
+  body .navbar-ready {
+    background-color: #9CD4ED !important;
+  }
+}
+
+body .container-sec {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body .container-sec section {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container-sec section:nth-of-type(1) {
+  background-color: #ECF0F1;
+}
+
+body .container-sec section:nth-of-type(2) {
+  background-color: #B3E5FC;
+}
+
+body .container-sec section:nth-of-type(3) {
+  background-color: #ECF0F1;
+}
+
+body .container-sec section:nth-of-type(4) {
+  background-color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/karte.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/karte.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+  body .container-sec section:nth-of-type(4) {
+    background: #FFFFFF !important;
+    display: inline-table;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  body .container-sec section {
+    display: inline-block;
+    width: 100vw;
+  }
+  body .container-sec #home {
+    height: 100vh;
+  }
+  body .container-sec #service {
+    height: auto;
+  }
+  body .container-sec #aktuelle {
+    height: 100vh;
+  }
+  body .container-sec #kontakt {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

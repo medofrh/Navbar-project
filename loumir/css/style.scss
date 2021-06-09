@@ -1,0 +1,189 @@
+/* 
+#ECF0F1
+#76b8e8
+#9CD4ED
+#3498db
+#4d4d4d
+#2c3e50
+#262626
+#ffc349
+#e74c3c
+*/
+
+$yello:#ffc349;
+$creame:#ECF0F1;
+$white:#FFFFFF;
+$blue:#9CD4ED;
+$gray:#4D4D4D;
+$black: #262626;
+$roboto: Roboto, sans-serif;
+$oswald: Oswald, sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: $creame;
+    overflow: hidden;
+
+    .navbar{
+        transform: translateY(-200px);
+        background-color: $blue !important;
+        transition: background-color 400ms linear;
+        
+        .navbar-brand{
+            font-family: $roboto;
+            font-weight: 800;
+            color: $black;
+        }
+        .navbar-brand:hover{
+            color: $white;
+            font-size: 140%;
+            transition: 500ms;
+        } 
+        .active{
+            color: $white !important;
+        }
+    }
+    .navbar-ready{
+        transform:translateY(0%);
+        transition: 1s;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 10000;
+
+        @media screen and (min-width: 992px) {
+            
+            li::before {  
+                transform: translateY(-100px);
+                transform-origin: bottom right;
+            }
+            
+            li:hover::before {
+                transform: translateY(0%);
+                transform-origin: bottom left;
+            }
+            
+            li::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                inset: 0 0 0 0;
+                background: $white;
+                border-radius: 20px;
+                z-index: -1;
+                transition: transform .5s ease;
+            }
+            
+            li > .nav-link:hover{
+                color: $gray !important;
+            }
+            
+            li {
+                position: relative;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }  
+        }
+        .nav-link{
+            font-family: $roboto;
+            font-weight: 400;
+        }
+    }
+    @media screen and (max-width :990px) {
+        .navbar-ready{
+        background-color: $blue !important;
+        }
+    }
+
+    .container-sec{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        // scroll-snap-type: y mandatory;
+         
+        section{
+            height: 100vh;
+            min-height: 100vh;
+            width: 100vw;
+            padding: 10vh;
+            display: flex;
+            flex-direction: column;
+            
+            // align-items: center;
+            // justify-content: center;
+            // scroll-snap-align: center;
+
+            &:nth-of-type(1){
+                background-color: $creame;
+            }
+            &:nth-of-type(2){
+                background-color: #B3E5FC;
+                // background:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../img/town.jpg');
+                // background-repeat: no-repeat;
+                // background-position: center;
+                // background-size: cover;
+            }
+            &:nth-of-type(3){
+                background-color: $creame;
+            }
+            &:nth-of-type(4){
+                background-color: $white;
+                background:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../img/karte.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                @media screen and (max-width: 991px) {
+                    background: $white !important;
+                    display: inline-table;
+                }
+            }
+
+        }
+        @media screen and (max-width: 991px) {
+            section{
+                display: inline-block;
+                width: 100vw;
+            }
+            #home{
+                height: 100vh;
+            }
+            #service{
+                height: auto;
+            }
+            #aktuelle{
+                height: 100vh;
+            }
+            #kontakt{
+                height: auto;
+            }
+        }
+        // #home{
+        //     height: 100vh;
+        // }
+        // #service{
+        //     display: inline-block;
+        // }
+        // #aktuelle{
+        //     height: 100vh;
+        // }
+        // #kontakt{
+        //     height: 100vh;
+        // }
+
+    }
+}
